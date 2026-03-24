@@ -5,8 +5,11 @@ WORKDIR /var/www/html
 RUN docker-php-ext-install pdo pdo_mysql mysqli
 
 
+
 # Copy PHP app source
 COPY . .
+# Copy app directory to /var/www/app for CodeIgniter
+COPY app /var/www/app
 
 # Use CodeIgniter's front controller as the main entry point
 COPY public/index.php /var/www/html/index.php
