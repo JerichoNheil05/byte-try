@@ -1,0 +1,393 @@
+DEBUG - 2026-02-25 10:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 10:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 10:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 10:42:35 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(164): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'Failed login attempt - incorrect password: 202312115@fit.edu.ph', null, null, 'failed')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Antipolo2005?')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bytemarket\\public\\index.php')
+ERROR - 2026-02-25 10:42:35 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 10:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 10:42:50 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'Failed login attempt - incorrect password: 202312115@fit.edu.ph\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(164): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'Failed login attempt - incorrect password: 202312115@fit.edu.ph', null, null, 'failed')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Antipolo2005?')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bytemarket\\public\\index.php')
+ERROR - 2026-02-25 10:42:50 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 10:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 10:42:55 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 10:42:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'User logged in successfully: 202312115@fit.edu.ph', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bytemarket\\public\\index.php')
+ERROR - 2026-02-25 10:42:55 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 10:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 10:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 10:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 10:59:15 --> CSRF token verified.
+DEBUG - 2026-02-25 10:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 10:59:15 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: subscription/activate]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('subscription/activate', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 11:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:28:26 --> CSRF token verified.
+DEBUG - 2026-02-25 11:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:28:26 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: subscription/activate]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('subscription/activate', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 11:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 11:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 11:51:59 --> CSRF token verified.
+DEBUG - 2026-02-25 11:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 11:51:59 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: subscription/activate]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('subscription/activate', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 11:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-02-25 12:08:51 --> CSRF token verified.
+DEBUG - 2026-02-25 12:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:08:52 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: payment/seller-subscription/checkout-session]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('payment/seller-subscription/checkout-session', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-25 12:09:00 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: subscription/terms_agree]
+in SYSTEMPATH\Security\Security.php on line 263.
+ 1 SYSTEMPATH\Security\Security.php(263): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(465): CodeIgniter\Filters\Filters->run('subscription/terms_agree', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 12:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 12:15:35 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:15:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:15:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:15:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'User logged in successfully: 202312115@fit.edu.ph', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 12:15:35 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 12:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 12:18:57 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"buyer\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:18:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"buyer\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:18:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"buyer\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:18:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(396): App\Models\BaseModel->auditLog(1, 'role_upgrade', 'user', 1, 'User upgraded from buyer to seller', [...], [...], 'success')
+ 7 APPPATH\Controllers\PaymentSimulation.php(102): App\Models\AuthModel->activateSellerMembership(1)
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->markSellerSubscriptionPaid()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 12:18:57 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+ERROR - 2026-02-25 12:18:57 --> Unknown column 'notification_type' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:18:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:18:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:18:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (:user_id:, :notification_type:, :title:, :message:, :icon:, :color:, :related_order_id:, :action_url:, :is_read:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(218): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(412): App\Models\BaseModel->createNotification(1, 'system', 'Seller Account Activated', 'Your seller account has been activated! You can now upload and sell digital products.', 'http://localhost/bytemarket/public/dashboard')
+ 7 APPPATH\Controllers\PaymentSimulation.php(102): App\Models\AuthModel->activateSellerMembership(1)
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->markSellerSubscriptionPaid()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 12:18:57 --> Notification creation error: Unknown column 'notification_type' in 'field list'
+INFO - 2026-02-25 12:18:57 --> User membership activated as seller: 1
+DEBUG - 2026-02-25 12:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 12:19:44 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"seller\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:19:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"seller\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:19:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'role_upgrade\', \'user\', 1, \'User upgraded from buyer to seller\', \'{\\"role\\":\\"seller\\"}\', \'{\\"role\\":\\"seller\\",\\"account_type\\":\\"seller\\",\\"subscription_status\\":\\"active\\",\\"membership_label\\":\\"Active\\"}\', \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 12:19:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(396): App\Models\BaseModel->auditLog(1, 'role_upgrade', 'user', 1, 'User upgraded from buyer to seller', [...], [...], 'success')
+ 7 APPPATH\Controllers\PaymentSimulation.php(102): App\Models\AuthModel->activateSellerMembership(1)
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->markSellerSubscriptionPaid()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 12:19:44 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+ERROR - 2026-02-25 12:19:44 --> Unknown column 'notification_type' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:19:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:19:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (1, \'system\', \'Seller Account Activated\', \'Your seller account has been activated! You can now upload and sell digital products.\', \'http://localhost/bytemarket/public/dashboard\', NULL, NULL, NULL, 0, \'2026-02-25 12:19:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `notifications` (`user_id`, `notification_type`, `title`, `message`, `icon`, `color`, `related_order_id`, `action_url`, `is_read`, `created_at`) VALUES (:user_id:, :notification_type:, :title:, :message:, :icon:, :color:, :related_order_id:, :action_url:, :is_read:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(218): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(412): App\Models\BaseModel->createNotification(1, 'system', 'Seller Account Activated', 'Your seller account has been activated! You can now upload and sell digital products.', 'http://localhost/bytemarket/public/dashboard')
+ 7 APPPATH\Controllers\PaymentSimulation.php(102): App\Models\AuthModel->activateSellerMembership(1)
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->markSellerSubscriptionPaid()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 12:19:44 --> Notification creation error: Unknown column 'notification_type' in 'field list'
+INFO - 2026-02-25 12:19:44 --> User membership activated as seller: 1
+DEBUG - 2026-02-25 12:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 12:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 12:26:00 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: POST, Route: payment/seller-subscription/checkout-session]
+in APPPATH\Controllers\PaymentSimulation.php on line 89.
+ 1 APPPATH\Controllers\PaymentSimulation.php(29): App\Controllers\PaymentSimulation->createPayMongoCheckoutSessionViaCurl(1)
+ 2 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->createSellerSubscriptionCheckoutSession()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 12:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 15:21:59 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:21:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:21:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:21:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'User logged in successfully: 202312115@fit.edu.ph', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 15:22:00 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 15:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 15:22:38 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:22:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:22:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:22:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(2, 'login', 'user', 2, 'User logged in successfully: colinajericho7@gmail.com', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('colinajericho7@gmail.com', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 15:22:38 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 15:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-25 15:22:50 --> Error: Call to undefined function App\Controllers\curl_init()
+[Method: POST, Route: payment/seller-subscription/checkout-session]
+in APPPATH\Controllers\PaymentSimulation.php on line 89.
+ 1 APPPATH\Controllers\PaymentSimulation.php(29): App\Controllers\PaymentSimulation->createPayMongoCheckoutSessionViaCurl(2)
+ 2 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\PaymentSimulation->createSellerSubscriptionCheckoutSession()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentSimulation))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-02-25 15:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 15:33:04 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (1, \'login\', \'user\', 1, \'User logged in successfully: 202312115@fit.edu.ph\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(1, 'login', 'user', 1, 'User logged in successfully: 202312115@fit.edu.ph', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('202312115@fit.edu.ph', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 15:33:04 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 15:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 15:33:32 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'Failed login attempt - incorrect password: colinajericho7@gmail.com\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'Failed login attempt - incorrect password: colinajericho7@gmail.com\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'Failed login attempt - incorrect password: colinajericho7@gmail.com\', NULL, NULL, \'failed\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(164): App\Models\BaseModel->auditLog(2, 'login', 'user', 2, 'Failed login attempt - incorrect password: colinajericho7@gmail.com', null, null, 'failed')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('colinajericho7@gmail.com', 'Antipolo2005?')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 15:33:32 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 15:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-25 15:33:40 --> Table 'bytemarket.audit_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (2, \'login\', \'user\', 2, \'User logged in successfully: colinajericho7@gmail.com\', NULL, NULL, \'success\', \'::1\', \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\', \'2026-02-25 15:33:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `audit_logs` (`user_id`, `action_type`, `entity_type`, `entity_id`, `description`, `old_values`, `new_values`, `status`, `ip_address`, `user_agent`, `created_at`) VALUES (:user_id:, :action_type:, :entity_type:, :entity_id:, :description:, :old_values:, :new_values:, :status:, :ip_address:, :user_agent:, :created_at:)', [...], false)
+ 5 APPPATH\Models\BaseModel.php(170): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Models\AuthModel.php(196): App\Models\BaseModel->auditLog(2, 'login', 'user', 2, 'User logged in successfully: colinajericho7@gmail.com', null, null, 'success')
+ 7 APPPATH\Controllers\Auth.php(168): App\Models\AuthModel->authenticateUser('colinajericho7@gmail.com', 'Admin123!')
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-25 15:33:40 --> Audit log error: Table 'bytemarket.audit_logs' doesn't exist
+DEBUG - 2026-02-25 15:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-25 15:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
