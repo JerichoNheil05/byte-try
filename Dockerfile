@@ -6,10 +6,13 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 
 
 
+
 # Copy PHP app source
 COPY . .
 # Copy app directory to /var/www/app for CodeIgniter
 COPY app /var/www/app
+# Copy system directory to /var/www/system for CodeIgniter core
+COPY system /var/www/system
 
 # Use CodeIgniter's front controller as the main entry point
 COPY public/index.php /var/www/html/index.php
