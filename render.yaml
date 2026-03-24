@@ -3,7 +3,6 @@ services:
     name: byte-try
     env: php
     buildCommand: |
-      apt-get update && apt-get install -y libicu-dev
-      docker-php-ext-install intl
+      apt-get update && apt-get install -y php-intl libicu-dev
       composer install
     startCommand: ""
