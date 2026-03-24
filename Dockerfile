@@ -4,8 +4,12 @@ WORKDIR /var/www/html
 # Install PHP extensions if needed
 RUN docker-php-ext-install pdo pdo_mysql mysqli
 
+
 # Copy PHP app source
 COPY . .
+
+# Use landing.php as the main entry point
+COPY app/Views/landing.php /var/www/html/index.php
 
 # Ensure Apache (www-data) owns all files
 RUN chown -R www-data:www-data /var/www/html
